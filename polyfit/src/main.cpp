@@ -27,11 +27,11 @@ int main() {
    */
   // YOUR CODE HERE
 
+  VectorXd coeffs = polyfit(xvals, yvals, 3);
+  double res(0.0);
   for (double x = 0; x <= 20; ++x) {
-    /**
-     * TODO: use `polyeval` to evaluate the x values.
-     */
-    std::cout << "YOUR CODE HERE" << std::endl; 
+    double res = polyeval(coeffs, x);
+    std::cout << res << std::endl; 
   }
 
   // Expected output
